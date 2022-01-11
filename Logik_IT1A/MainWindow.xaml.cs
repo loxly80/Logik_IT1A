@@ -29,5 +29,37 @@ namespace Logik_IT1A
         {
             ((Ellipse)sender).Fill = Brushes.Red;
         }
+
+        private void Kruh_0_0_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (Kruh_0_0.Fill.ToString()== "#FFF7F7F7")
+            {
+                Kruh_0_0.Fill = Brushes.Red;
+            }
+            else if (Kruh_0_0.Fill.ToString() == Brushes.Red.ToString())
+            {
+                Kruh_0_0.Fill = Brushes.Green;
+            }
+            else if (Kruh_0_0.Fill.ToString() == Brushes.Green.ToString())
+            {
+                Kruh_0_0.Fill = Brushes.Blue;
+            }
+            else if (Kruh_0_0.Fill.ToString() == Brushes.Blue.ToString())
+            {
+                Kruh_0_0.Fill = Brushes.Yellow;
+            }
+            else if (Kruh_0_0.Fill.ToString() == Brushes.Yellow.ToString())
+            {
+                Kruh_0_0.Fill = Brushes.Orange;
+            }
+            else if (Kruh_0_0.Fill.ToString() == Brushes.Orange.ToString())
+            {
+                Kruh_0_0.Fill = Brushes.Purple;
+            }
+            else
+            {
+                Kruh_0_0.Fill = Brushes.Red;
+            }
+        }
     }
 }
