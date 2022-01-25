@@ -20,41 +20,105 @@ namespace Logik_IT1A
     /// </summary>
     public partial class MainWindow : Window
     {
+        Brush barva1;
+
         public MainWindow()
         {
             InitializeComponent();
+            Prvni_Kolo();
         }
 
         private void Ellipse_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            if (Kruh_0_0.Fill.ToString()== "#FFF7F7F7")
+            Ellipse ellipse = (Ellipse)sender; //přetypování na Ellipse
+            if (ellipse.Fill.ToString()== "#FFF7F7F7")
             {
-                Kruh_0_0.Fill = Brushes.Red;
+                ellipse.Fill = Brushes.Red;
             }
-            else if (Kruh_0_0.Fill.ToString() == Brushes.Red.ToString())
+            else if (ellipse.Fill.ToString() == Brushes.Red.ToString())
             {
-                Kruh_0_0.Fill = Brushes.Green;
+                ellipse.Fill = Brushes.Green;
             }
-            else if (Kruh_0_0.Fill.ToString() == Brushes.Green.ToString())
+            else if (ellipse.Fill.ToString() == Brushes.Green.ToString())
             {
-                Kruh_0_0.Fill = Brushes.Blue;
+                ellipse.Fill = Brushes.Blue;
             }
-            else if (Kruh_0_0.Fill.ToString() == Brushes.Blue.ToString())
+            else if (ellipse.Fill.ToString() == Brushes.Blue.ToString())
             {
-                Kruh_0_0.Fill = Brushes.Yellow;
+                ellipse.Fill = Brushes.Yellow;
             }
-            else if (Kruh_0_0.Fill.ToString() == Brushes.Yellow.ToString())
+            else if (ellipse.Fill.ToString() == Brushes.Yellow.ToString())
             {
-                Kruh_0_0.Fill = Brushes.Orange;
+                ellipse.Fill = Brushes.Orange;
             }
-            else if (Kruh_0_0.Fill.ToString() == Brushes.Orange.ToString())
+            else if (ellipse.Fill.ToString() == Brushes.Orange.ToString())
             {
-                Kruh_0_0.Fill = Brushes.Purple;
+                ellipse.Fill = Brushes.Purple;
             }
             else
             {
-                Kruh_0_0.Fill = Brushes.Red;
+                ellipse.Fill = Brushes.Red;
             }
+        }       
+
+        private void Nastav_Kolo_Disabled(Ellipse ellipse)
+        {
+            ellipse.IsEnabled = false;
+            ellipse.Stroke = Brushes.Gray;
+            ellipse.Fill = Brushes.White;
+        }
+
+        private void Prvni_Kolo()
+        {
+            Kruh_0_0.IsEnabled = true;
+            Kruh_0_1.IsEnabled = true;
+            Kruh_0_2.IsEnabled = true;
+            Kruh_0_3.IsEnabled = true;
+
+            Nastav_Kolo_Disabled(Kruh_1_0);
+            Nastav_Kolo_Disabled(Kruh_1_1);
+            Nastav_Kolo_Disabled(Kruh_1_2);
+            Nastav_Kolo_Disabled(Kruh_1_3);
+
+            Nastav_Kolo_Disabled(Kruh_2_0);
+            Nastav_Kolo_Disabled(Kruh_2_1);
+            Nastav_Kolo_Disabled(Kruh_2_2);
+            Nastav_Kolo_Disabled(Kruh_2_3);
+
+            Nastav_Kolo_Disabled(Kruh_3_0);
+            Nastav_Kolo_Disabled(Kruh_3_1);
+            Nastav_Kolo_Disabled(Kruh_3_2);
+            Nastav_Kolo_Disabled(Kruh_3_3);
+
+            Nastav_Kolo_Disabled(Kruh_4_0);
+            Nastav_Kolo_Disabled(Kruh_4_1);
+            Nastav_Kolo_Disabled(Kruh_4_2);
+            Nastav_Kolo_Disabled(Kruh_4_3);
+
+            Nastav_Kolo_Disabled(Kruh_5_0);
+            Nastav_Kolo_Disabled(Kruh_5_1);
+            Nastav_Kolo_Disabled(Kruh_5_2);
+            Nastav_Kolo_Disabled(Kruh_5_3);
+
+            Nastav_Kolo_Disabled(Kruh_6_0);
+            Nastav_Kolo_Disabled(Kruh_6_1);
+            Nastav_Kolo_Disabled(Kruh_6_2);
+            Nastav_Kolo_Disabled(Kruh_6_3);
+
+            Nastav_Kolo_Disabled(Kruh_7_0);
+            Nastav_Kolo_Disabled(Kruh_7_1);
+            Nastav_Kolo_Disabled(Kruh_7_2);
+            Nastav_Kolo_Disabled(Kruh_7_3);
+
+            Nastav_Kolo_Disabled(Kruh_8_0);
+            Nastav_Kolo_Disabled(Kruh_8_1);
+            Nastav_Kolo_Disabled(Kruh_8_2);
+            Nastav_Kolo_Disabled(Kruh_8_3);
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Prvni_Kolo();
         }
     }
 }
