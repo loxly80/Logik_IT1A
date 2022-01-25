@@ -27,11 +27,6 @@ namespace Logik_IT1A
 
         private void Ellipse_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            ((Ellipse)sender).Fill = Brushes.Red;
-        }
-
-        private void Kruh_0_0_MouseDown(object sender, MouseButtonEventArgs e)
-        {
             if (Kruh_0_0.Fill.ToString()== "#FFF7F7F7")
             {
                 Kruh_0_0.Fill = Brushes.Red;
